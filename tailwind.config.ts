@@ -10,9 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['Rajdhani', 'sans-serif'],
+        headline: ['Orbitron', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +87,19 @@ export default {
             height: '0',
           },
         },
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100%)' },
+        },
+        cursor: {
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        scan: 'scan 8s linear infinite',
+        cursor: 'cursor 1.1s infinite step-start',
       },
     },
   },
