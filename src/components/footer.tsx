@@ -2,7 +2,7 @@ import { Github, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer id="contact" className="py-12 bg-black/50 border-t border-gray-800">
+        <footer id="footer" className="py-12 bg-black/50 border-t border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold neon-text-blue mb-4">Connect with NexusAI</h2>
                 <p className="text-lg neon-text-pink mb-8">Initiate contact through our designated communication channels.</p>

@@ -16,13 +16,19 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
+  }
+
   return (
     <header>
       <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <a href="#home" className="flex-shrink-0">
+              <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex-shrink-0">
                 <span className="text-2xl font-bold neon-text-blue">NEXUS<span className="neon-text-pink">AI</span></span>
               </a>
               <div className="hidden md:block">
@@ -31,6 +37,7 @@ const Header = () => {
                     <a
                       key={link.name}
                       href={link.href}
+                      onClick={(e) => handleLinkClick(e, link.href)}
                       className="nav-item px-3 py-2 rounded-md text-sm font-medium neon-text-blue hover:neon-text-pink transition"
                     >
                       {link.name}
@@ -67,7 +74,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="nav-item block px-3 py-2 rounded-md text-base font-medium neon-text-blue hover:neon-text-pink hover:bg-gray-900/50 transition"
               >
                 {link.name}

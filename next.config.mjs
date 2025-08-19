@@ -1,7 +1,5 @@
-import type {NextConfig} from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -20,15 +18,13 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // Prevent packages that require server-side node modules from being bundled for the client.
+      // Don't "polyfill" Node.js modules for the browser
+      // So certain packages that depend on them will throw at build time
       config.resolve.fallback = {
         ...config.resolve.fallback,
         async_hooks: false,
       };
     }
-    
-    // These are server-side dependencies that should not be bundled for the client.
-    config.externals.push('pino-pretty', 'lokijs', 'encoding');
 
     return config;
   },

@@ -20,6 +20,7 @@ import {
   Check,
   X
 } from 'lucide-react';
+import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
               <div className="text-center">
                   <h1 className="text-5xl md:text-7xl font-bold mb-6">
                       <span className="neon-text-blue">CYBERNETIC</span> 
-                      <span className="neon-text-pink"> AI AGENTS</span> 
+                      <span className="neon-text-pink">AI AGENTS</span> 
                       <br />
                       <span className="text-xl md:text-3xl mt-4 block neon-text-green">FOR THE DIGITAL FRONTIER</span>
                   </h1>
@@ -262,6 +263,17 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 grid-pattern">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold neon-text-pink mb-4">INITIATE CONTACT</h2>
+                <p className="text-xl neon-text-blue max-w-3xl mx-auto">Send a secure transmission to the NexusAI high command.</p>
+            </div>
+            <ContactForm />
+          </div>
         </section>
       </main>
       <Footer />
