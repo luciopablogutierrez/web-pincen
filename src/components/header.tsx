@@ -48,7 +48,7 @@ const Header = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center md:ml-6">
-                 <button className="neon-border-blue px-4 py-2 rounded-md text-sm font-medium neon-text-blue hover:neon-glow-blue transition">
+                 <button className="neon-border-blue px-4 py-2 rounded-md text-sm font-medium neon-text-blue hover:neon-glow-blue transition magnetic-target">
                     Console Login
                 </button>
               </div>
@@ -81,7 +81,7 @@ const Header = () => {
               </a>
             ))}
              <div className="pt-2 px-2">
-                <button className="w-full neon-border-blue px-4 py-2 rounded-md text-sm font-medium neon-text-blue hover:neon-glow-blue transition">
+                <button className="w-full neon-border-blue px-4 py-2 rounded-md text-sm font-medium neon-text-blue hover:neon-glow-blue transition magnetic-target">
                     Console Login
                 </button>
             </div>

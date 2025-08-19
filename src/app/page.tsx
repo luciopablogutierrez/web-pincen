@@ -44,10 +44,10 @@ export default function Home() {
                       </p>
                       
                       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
-                          <button className="cyber-btn neon-border-pink px-8 py-4 rounded-md text-lg font-bold neon-text-pink hover:neon-glow-pink mx-auto sm:mx-0 inline-flex items-center justify-center">
+                          <button className="cyber-btn neon-border-pink px-8 py-4 rounded-md text-lg font-bold neon-text-pink hover:neon-glow-pink mx-auto sm:mx-0 inline-flex items-center justify-center magnetic-target">
                               DEPLOY AGENTS <ArrowRight className="ml-2 h-5 w-5" />
                           </button>
-                          <button className="cyber-btn neon-border-blue px-8 py-4 rounded-md text-lg font-bold neon-text-blue hover:neon-glow-blue mx-auto sm:mx-0 inline-flex items-center justify-center">
+                          <button className="cyber-btn neon-border-blue px-8 py-4 rounded-md text-lg font-bold neon-text-blue hover:neon-glow-blue mx-auto sm:mx-0 inline-flex items-center justify-center magnetic-target">
                               REQUEST DEMO <Terminal className="ml-2 h-5 w-5" />
                           </button>
                       </div>
@@ -228,7 +228,7 @@ export default function Home() {
                             <li className="flex items-center text-muted-foreground"><X className="mr-3 h-5 w-5" /><span>No Sentinel Units</span></li>
                             <li className="flex items-center text-muted-foreground"><X className="mr-3 h-5 w-5" /><span>No Swarm Controllers</span></li>
                         </ul>
-                        <button className="cyber-btn neon-border-blue w-full py-3 rounded-md font-bold neon-text-blue hover:neon-glow-blue">DEPLOY STARTER</button>
+                        <button className="cyber-btn neon-border-blue w-full py-3 rounded-md font-bold neon-text-blue hover:neon-glow-blue magnetic-target">DEPLOY STARTER</button>
                     </div>
 
                     <div className="cyber-card neon-border-purple p-8 rounded-lg bg-black/40 text-center transform md:scale-110 z-10 relative">
@@ -245,7 +245,7 @@ export default function Home() {
                            <li className="flex items-center"><Check className="neon-text-green mr-3 h-5 w-5" /><span>1 Swarm Controller</span></li>
                            <li className="flex items-center"><Check className="neon-text-green mr-3 h-5 w-5" /><span>Priority Support</span></li>
                         </ul>
-                        <button className="cyber-btn neon-border-purple w-full py-3 rounded-md font-bold neon-text-purple hover:neon-glow-purple">DEPLOY ENTERPRISE</button>
+                        <button className="cyber-btn neon-border-purple w-full py-3 rounded-md font-bold neon-text-purple hover:neon-glow-purple magnetic-target">DEPLOY ENTERPRISE</button>
                     </div>
                     
                     <div className="cyber-card neon-border-yellow p-8 rounded-lg bg-black/40 text-center">
@@ -259,7 +259,7 @@ export default function Home() {
                             <li className="flex items-center"><Check className="neon-text-green mr-3 h-5 w-5" /><span>On-chain Governance</span></li>
                             <li className="flex items-center"><Check className="neon-text-green mr-3 h-5 w-5" /><span>24/7 Technical Liaison</span></li>
                         </ul>
-                        <button className="cyber-btn neon-border-yellow w-full py-3 rounded-md font-bold neon-text-yellow hover:neon-glow-yellow">INITIATE CONTACT</button>
+                        <button className="cyber-btn neon-border-yellow w-full py-3 rounded-md font-bold neon-text-yellow hover:neon-glow-yellow magnetic-target">INITIATE CONTACT</button>
                     </div>
                 </div>
             </div>

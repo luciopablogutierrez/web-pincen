@@ -35,7 +35,7 @@ export function ContactForm() {
         <textarea id="mensaje" {...register("mensaje")} className="border p-2 w-full" />
         {errors.mensaje && <span className="text-red-500">{errors.mensaje.message}</span>}
       </div>
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded magnetic-target">Enviar</button>
     </form>
   );
 }
