@@ -15,32 +15,25 @@ const Typewriter = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   useEffect(() => {
-    let timer: NodeJS.Timeout;
     const type = () => {
       const currentWord = words[wordIndex];
-      const shouldDelete = isDeleting;
-
-      setText(
-        shouldDelete
-          ? currentWord.substring(0, text.length - 1)
-          : currentWord.substring(0, text.length + 1)
-      );
       
-      let typeSpeed = isDeleting ? 75 : 150;
+      if (isDeleting) {
+        setText(currentWord.substring(0, text.length - 1));
+      } else {
+        setText(currentWord.substring(0, text.length + 1));
+      }
 
-      if (!shouldDelete && text === currentWord) {
-        typeSpeed = 2000; // Pause at end of word
-        setIsDeleting(true);
-      } else if (shouldDelete && text === '') {
+      if (!isDeleting && text === currentWord) {
+        setTimeout(() => setIsDeleting(true), 2000); // Pause at end of word
+      } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setWordIndex((prev) => (prev + 1) % words.length);
-        typeSpeed = 500; // Pause before typing new word
       }
-      
-      timer = setTimeout(type, typeSpeed);
-    }
+    };
     
-    timer = setTimeout(type, 150);
+    const typingSpeed = isDeleting ? 75 : 150;
+    const timer = setTimeout(type, typingSpeed);
 
     return () => clearTimeout(timer);
 
