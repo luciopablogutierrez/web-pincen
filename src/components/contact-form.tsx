@@ -22,17 +22,17 @@ export function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-4 border rounded">
       <div>
         <label htmlFor="nombre">Nombre</label>
-        <input id="nombre" {...register("nombre")} className="border p-2 w-full" />
+        <input id="nombre" {...register("nombre")} className="border p-2 w-full bg-white text-black" />
         {errors.nombre && <span className="text-red-500">{errors.nombre.message}</span>}
       </div>
       <div>
         <label htmlFor="email">Email</label>
-        <input id="email" type="email" {...register("email")} className="border p-2 w-full" />
+        <input id="email" type="email" {...register("email")} className="border p-2 w-full bg-white text-black" />
         {errors.email && <span className="text-red-500">{errors.email.message}</span>}
       </div>
       <div>
         <label htmlFor="mensaje">Mensaje</label>
-        <textarea id="mensaje" {...register("mensaje")} className="border p-2 w-full" />
+        <textarea id="mensaje" {...register("mensaje")} className="border p-2 w-full bg-white text-black" />
         {errors.mensaje && <span className="text-red-500">{errors.mensaje.message}</span>}
       </div>
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded magnetic-target">Enviar</button>
